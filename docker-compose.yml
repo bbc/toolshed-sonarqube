@@ -11,4 +11,5 @@ services:
       - ./data/sonarqube:/opt/sonarqube/data
     environment:
       - VIRTUAL_HOST=sonarqube
+      - VIRTUAL_PORT=9000
     network_mode: bridge
