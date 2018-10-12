@@ -13,7 +13,7 @@ pipeline {
         script {
           def hasYaml = fileExists 'docker-compose.yml'
             if (hasYaml) {
-              sh "curl -H 'Content-type: text/x-yaml' --cert /etc/pki/tls/certs/client.crt --key /etc/pki/tls/private/client.key --request PUT --data-binary @docker-compose.yml https://planter.toolshed.tools.bbc.co.uk/sonarqube
+              sh "curl -H 'Content-type: text/x-yaml' --cert /etc/pki/tls/certs/client.crt --key /etc/pki/tls/private/client.key --request PUT --data-binary @docker-compose.yml https://planter.toolshed.tools.bbc.co.uk/sonarqube"
             } else {
               sh 'echo "ERROR: Please create a docker-compose.yml file to deploy to Toolshed" && false'
             }
