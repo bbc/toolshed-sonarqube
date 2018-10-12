@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  sonarqube:
+    images: sonarqube:7.1
+    ports:
+      - '9000:9000'
+      - '9092:9092'
+    volumes:
+      - ./data/sonarqube:/opt/sonarqube/data
+    environment:
+      - VIRTUAL_HOST=sourcegraph
+    network_mode: bridge
