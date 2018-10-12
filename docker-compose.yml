@@ -10,5 +10,5 @@ services:
     volumes:
       - ./data/sonarqube:/opt/sonarqube/data
     environment:
-      - VIRTUAL_HOST=sourcegraph
+      - VIRTUAL_HOST=sonarqube
     network_mode: bridge
